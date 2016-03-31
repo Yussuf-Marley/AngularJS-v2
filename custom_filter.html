@@ -1,0 +1,45 @@
+<!--
+**
+* Cytonn Technologies
+*
+* @author: Joseph Mahugu <jmahugu@cytonn.com>
+*
+* Project: AngularJs hello world
+*
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AngularJS Sample App</title>
+  <style>
+    .main{
+      width: 75%;
+      margin: auto;
+    }
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="main" ng-app="myApp" ng-controller="myController">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="employee in employees">
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.gender | gender }}</td>
+          <td>{{ employee.age }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

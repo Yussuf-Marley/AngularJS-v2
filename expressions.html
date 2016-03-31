@@ -1,0 +1,35 @@
+<!--
+**
+* Cytonn Technologies
+*
+* @author: Joseph Mahugu <jmahugu@cytonn.com>
+*
+* Project: AngularJs: Expressions
+*
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AngularJS: Working with Expressions</title>
+  <style>
+    .main{
+      width: 75%;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="main" ng-app = "" ng-init = "quantity=1; cost=350; student={firstname:'Joseph', lastname:'Marley', rollno: 333}; marks=[80,86,96,79,98]">
+    <h3>Student Particulars</h3>
+    <hr>
+    <p><b>Name:</b> {{student.firstname + " " + student.lastname}}</p>
+    <!--Working with numbers-->
+    <p><b>Expense on Books:</b> Kshs {{cost*quantity}}</p>
+    <!--Using an object-->
+    <p><b>Student No:</b> {{student.rollno}}</p>
+    <!--Using an array-->
+    <p><b>Marks(Math):</b> {{marks[4]}}</p>
+  </div>
+<script src="angular.min.js"></script>
+</body>
+</html>
